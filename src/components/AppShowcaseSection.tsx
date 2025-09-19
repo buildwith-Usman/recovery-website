@@ -58,24 +58,24 @@ const AppShowcaseSection = () => {
               {/* Navigation Arrows */}
               <button
                 onClick={prevSlide}
-                className="absolute left-[-60px] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors z-20"
+                className="absolute left-[-60px] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 hover:scale-110 transition-all duration-300 z-20 group"
               >
-                <ChevronLeft className="w-5 h-5 text-white" />
+                <ChevronLeft className="w-5 h-5 text-white group-hover:animate-pulse" />
               </button>
               
               <button
                 onClick={nextSlide}
-                className="absolute right-[-60px] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors z-20"
+                className="absolute right-[-60px] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 hover:scale-110 transition-all duration-300 z-20 group"
               >
-                <ChevronRight className="w-5 h-5 text-white" />
+                <ChevronRight className="w-5 h-5 text-white group-hover:animate-pulse" />
               </button>
               
               {/* App Screen Image */}
-              <div className="relative z-10 w-80 h-[600px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-700 to-slate-800">
+              <div className="relative z-10 w-80 h-[600px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-700 to-slate-800 hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
                 <img
                   src={appScreens[currentSlide].image}
                   alt={appScreens[currentSlide].title}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain transition-all duration-500"
                 />
               </div>
               
@@ -85,8 +85,8 @@ const AppShowcaseSection = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/40'
+                    className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
+                      index === currentSlide ? 'bg-white scale-110' : 'bg-white/40 hover:bg-white/60'
                     }`}
                   />
                 ))}
