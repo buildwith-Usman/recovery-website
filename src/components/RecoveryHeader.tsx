@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Heart, Menu, Download } from "lucide-react";
+import { Menu, Download } from "lucide-react";
+import icRecoveryLogo from "@/assets/ic_recovery_logo.png";
 
 const RecoveryHeader = () => {
   return (
@@ -8,8 +9,12 @@ const RecoveryHeader = () => {
         <nav className="flex items-center justify-between">
           {/* Logo and Brand */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 bg-gradient-healing rounded-lg shadow-soft">
-              <Heart className="w-6 h-6 text-healing-foreground" />
+            <div className="flex items-center justify-center w-10 h-10">
+              <img 
+                src={icRecoveryLogo} 
+                alt="IC Recovery Center" 
+                className="w-10 h-10 object-contain rounded-lg"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">Recovery</h1>
