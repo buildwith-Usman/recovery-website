@@ -1,15 +1,19 @@
-import { Heart } from "lucide-react";
+import icRecoveryLogo from "@/assets/ic_recovery_logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-trust text-trust-foreground py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-10 h-10 bg-gradient-healing rounded-lg">
-                <Heart className="w-6 h-6 text-healing-foreground" />
+              <div className="flex items-center justify-center w-10 h-10">
+                <img 
+                  src={icRecoveryLogo} 
+                  alt="IC Recovery Center" 
+                  className="w-10 h-10 object-contain rounded-lg"
+                />
               </div>
               <div>
                 <h3 className="text-xl font-bold">Recovery</h3>

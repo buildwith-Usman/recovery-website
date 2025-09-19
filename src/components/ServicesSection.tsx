@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Video, Pill, Activity, UserCheck, Stethoscope, DollarSign, Clock } from "lucide-react";
+import icViewServices from "@/assets/ic_view_services.png";
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
+        <section id="services" className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden scroll-mt-20">
+      <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary-light px-4 py-2 rounded-full text-sm font-medium text-primary">
+          <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full text-sm font-medium text-primary-foreground">
             <Stethoscope className="w-4 h-4" />
             Our Services
           </div>
@@ -22,7 +23,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8 items-center">
           {/* For Patients */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
@@ -33,49 +34,49 @@ const ServicesSection = () => {
             </div>
 
             <div className="grid gap-6">
-              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-primary" />
+              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-lg hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary/90 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Calendar className="w-6 h-6 text-white group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-card-foreground mb-2">Book Appointments</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors duration-300">Book Appointments</h4>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Schedule consultations with licensed psychiatrists and therapists at your convenience.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-healing-light rounded-lg flex items-center justify-center">
-                  <Video className="w-6 h-6 text-healing" />
+              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-lg hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary/90 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Video className="w-6 h-6 text-white group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-card-foreground mb-2">Secure Video Consultations</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors duration-300">Secure Video Consultations</h4>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Connect with healthcare providers through secure, HIPAA-compliant video sessions.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-secondary-light rounded-lg flex items-center justify-center">
-                  <Pill className="w-6 h-6 text-secondary" />
+              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-lg hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary/90 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Pill className="w-6 h-6 text-white group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-card-foreground mb-2">Medicine Ordering</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors duration-300">Medicine Ordering</h4>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Order prescribed medications directly through the app with convenient delivery tracking.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-trust/20 rounded-lg flex items-center justify-center">
-                  <Activity className="w-6 h-6 text-trust" />
+              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-lg hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary/90 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Activity className="w-6 h-6 text-white group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-card-foreground mb-2">Track Your Progress</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors duration-300">Track Your Progress</h4>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Monitor your appointments, medication delivery, and overall mental health journey.
                   </p>
                 </div>
@@ -83,7 +84,16 @@ const ServicesSection = () => {
             </div>
           </div>
 
-          {/* For Doctors */}
+          {/* Vertical Image */}
+          <div className="hidden lg:flex justify-center items-center h-full">
+            <img
+              src={icViewServices}
+              alt="Healthcare professionals providing mental health services"
+              className="max-w-lg h-[600px] object-contain mx-auto mt-[120px]"
+            />
+          </div>
+
+          {/* For Healthcare Providers */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
               <h3 className="text-2xl font-bold text-foreground mb-4">For Healthcare Providers</h3>
@@ -93,33 +103,33 @@ const ServicesSection = () => {
             </div>
 
             <div className="grid gap-6">
-              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-secondary-light rounded-lg flex items-center justify-center">
-                  <UserCheck className="w-6 h-6 text-secondary" />
+              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-lg hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary/90 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <UserCheck className="w-6 h-6 text-white group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-card-foreground mb-2">Easy Registration</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors duration-300">Easy Registration</h4>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Register and get verified on our platform with a streamlined approval process.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-healing-light rounded-lg flex items-center justify-center">
-                  <Video className="w-6 h-6 text-healing" />
+                            <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-lg hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary/90 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Video className="w-6 h-6 text-white group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-card-foreground mb-2">Secure Therapy Sessions</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors duration-300">Secure Therapy Sessions</h4>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Provide online therapy and consultations through our secure, professional platform.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-primary" />
+              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-lg hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Appointment Management</h4>
@@ -130,8 +140,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-trust/20 rounded-lg flex items-center justify-center">
-                  <DollarSign className="w-6 h-6 text-trust" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <DollarSign className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Earn Through Consultations</h4>
@@ -142,13 +152,6 @@ const ServicesSection = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button variant="cta" size="lg">
-            Get Started Today
-          </Button>
         </div>
       </div>
     </section>

@@ -1,111 +1,159 @@
 import { Button } from "@/components/ui/button";
-import { Download, Smartphone, Star, Users, Shield, Clock } from "lucide-react";
-import appFeaturesImage from "@/assets/app-features.jpg";
+import { Download, Smartphone, Star, Users, Shield, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import pharmacyMarketplace from "@/assets/pharmacy-marketplace.png";
+import patientDashboard from "@/assets/patient-dashboard.png";
+import doctorProfileAbout from "@/assets/doctor-profile-about.png";
+import paymentBookingScreen from "@/assets/payment-booking-screen.png";
+import { useState, useEffect } from "react";
 
 const AppShowcaseSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const appScreens = [
+    {
+      image: patientDashboard,
+      title: "Patient Dashboard",
+      description: "View upcoming sessions, browse therapists and psychiatrists, and manage your mental health journey."
+    },
+    {
+      image: doctorProfileAbout,
+      title: "Doctor Profiles",
+      description: "Detailed profiles with ratings, reviews, and booking options for licensed mental health professionals."
+    },
+    {
+      image: pharmacyMarketplace,
+      title: "Pharmacy Marketplace",
+      description: "Order prescribed medications with discounts and convenient delivery tracking."
+    },
+    {
+      image: paymentBookingScreen,
+      title: "Secure Payments",
+      description: "Book consultations and pay securely with JazzCash, Easypaisa, or card payments."
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % appScreens.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + appScreens.length) % appScreens.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-12 lg:py-20 bg-gradient-to-br from-slate-800 to-slate-900 scroll-mt-20">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* App Features Image */}
-          <div className="relative">
-            <div className="relative z-10">
-              <img
-                src={appFeaturesImage}
-                alt="Recovery App Features Showcase"
-                className="w-full rounded-3xl shadow-strong"
-              />
+          {/* App Carousel */}
+          <div className="relative flex justify-center">
+            <div className="relative">
+              {/* Background Circle */}
+              <div className="absolute -inset-8 bg-gradient-primary rounded-full opacity-20 blur-3xl"></div>
+              
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-[-60px] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 hover:scale-110 transition-all duration-300 z-20 group"
+              >
+                <ChevronLeft className="w-5 h-5 text-white group-hover:animate-pulse" />
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                className="absolute right-[-60px] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 hover:scale-110 transition-all duration-300 z-20 group"
+              >
+                <ChevronRight className="w-5 h-5 text-white group-hover:animate-pulse" />
+              </button>
+              
+              {/* App Screen Image */}
+              <div className="relative z-10 w-80 h-[600px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-700 to-slate-800 hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
+                <img
+                  src={appScreens[currentSlide].image}
+                  alt={appScreens[currentSlide].title}
+                  className="w-full h-full object-contain transition-all duration-500"
+                />
+              </div>
+              
+              {/* Slide Indicators - Outside Device Frame */}
+              <div className="flex justify-center gap-2 mt-6">
+                {appScreens.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
+                      index === currentSlide ? 'bg-white scale-110' : 'bg-white/40 hover:bg-white/60'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
-            {/* Background decoration */}
-            <div className="absolute -top-8 -right-8 w-full h-full bg-gradient-primary rounded-3xl opacity-10 -z-10"></div>
-            <div className="absolute top-4 left-4 w-24 h-24 bg-healing rounded-full opacity-20 blur-2xl"></div>
           </div>
 
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 bg-primary-light px-4 py-2 rounded-full text-sm font-medium text-primary">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium text-white border border-white/20 shadow-soft">
                 <Smartphone className="w-4 h-4" />
                 App Showcase
               </div>
-              <h2 className="text-4xl font-bold text-foreground">
+              <h2 className="text-4xl font-bold text-white">
                 Experience the Future of
-                <span className="text-transparent bg-gradient-primary bg-clip-text"> Mental Healthcare</span>
+                <span className="text-transparent bg-gradient-to-r from-white to-white/80 bg-clip-text"> Mental Healthcare</span>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Our intuitive mobile app puts comprehensive mental health services at your fingertips. 
-                From booking appointments to tracking your progress, everything is designed for ease of use and reliability.
-              </p>
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-white">{appScreens[currentSlide].title}</h3>
+                <p className="text-lg text-white/80 leading-relaxed">
+                  {appScreens[currentSlide].description}
+                </p>
+              </div>
             </div>
 
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="flex items-center gap-3 p-4 bg-card rounded-xl shadow-soft">
-                <div className="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center">
-                  <Users className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-soft">
+                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                  <Users className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="font-semibold text-card-foreground">Easy Booking</p>
-                  <p className="text-sm text-muted-foreground">Quick appointments</p>
+                  <p className="font-semibold text-white">Easy Booking</p>
+                  <p className="text-sm text-white/80">Quick appointments</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-card rounded-xl shadow-soft">
-                <div className="w-10 h-10 bg-healing-light rounded-lg flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-healing" />
+              <div className="flex items-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-soft">
+                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="font-semibold text-card-foreground">Secure Sessions</p>
-                  <p className="text-sm text-muted-foreground">HIPAA compliant</p>
+                  <p className="font-semibold text-white">Secure Sessions</p>
+                  <p className="text-sm text-white/80">HIPAA compliant</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-card rounded-xl shadow-soft">
-                <div className="w-10 h-10 bg-secondary-light rounded-lg flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-secondary" />
+              <div className="flex items-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-soft">
+                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                  <Clock className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="font-semibold text-card-foreground">24/7 Available</p>
-                  <p className="text-sm text-muted-foreground">Always accessible</p>
+                  <p className="font-semibold text-white">24/7 Available</p>
+                  <p className="text-sm text-white/80">Always accessible</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-card rounded-xl shadow-soft">
-                <div className="w-10 h-10 bg-trust/20 rounded-lg flex items-center justify-center">
-                  <Star className="w-5 h-5 text-trust" />
+              <div className="flex items-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-soft">
+                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                  <Star className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="font-semibold text-card-foreground">Top Rated</p>
-                  <p className="text-sm text-muted-foreground">4.9/5 rating</p>
+                  <p className="font-semibold text-white">Top Rated</p>
+                  <p className="text-sm text-white/80">4.9/5 rating</p>
                 </div>
               </div>
-            </div>
-
-            {/* App Store Stats */}
-            <div className="flex items-center gap-8">
-              <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">10K+</p>
-                <p className="text-sm text-muted-foreground">Active Patients</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">500+</p>
-                <p className="text-sm text-muted-foreground">Verified Doctors</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">4.9</p>
-                <p className="text-sm text-muted-foreground">App Store Rating</p>
-              </div>
-            </div>
-
-            {/* Download CTA */}
-            <div className="space-y-4">
-              <Button variant="hero" size="lg" className="w-full gap-2">
-                <Download className="w-5 h-5" />
-                Download Recovery App
-              </Button>
-              <p className="text-sm text-muted-foreground text-center">
-                Available on Google Play Store • Free to download
-              </p>
             </div>
           </div>
         </div>
