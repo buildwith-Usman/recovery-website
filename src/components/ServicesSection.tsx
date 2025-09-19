@@ -7,7 +7,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary-light px-4 py-2 rounded-full text-sm font-medium text-primary">
+          <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full text-sm font-medium text-primary-foreground">
             <Stethoscope className="w-4 h-4" />
             Our Services
           </div>
@@ -46,8 +46,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-healing-light rounded-lg flex items-center justify-center">
-                  <Video className="w-6 h-6 text-healing" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
+                  <Video className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Secure Video Consultations</h4>
@@ -58,8 +58,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-secondary-light rounded-lg flex items-center justify-center">
-                  <Pill className="w-6 h-6 text-secondary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
+                  <Pill className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Medicine Ordering</h4>
@@ -70,8 +70,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-trust/20 rounded-lg flex items-center justify-center">
-                  <Activity className="w-6 h-6 text-trust" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
+                  <Activity className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Track Your Progress</h4>
@@ -94,8 +94,8 @@ const ServicesSection = () => {
 
             <div className="grid gap-6">
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-secondary-light rounded-lg flex items-center justify-center">
-                  <UserCheck className="w-6 h-6 text-secondary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
+                  <UserCheck className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Easy Registration</h4>
@@ -105,9 +105,9 @@ const ServicesSection = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-healing-light rounded-lg flex items-center justify-center">
-                  <Video className="w-6 h-6 text-healing" />
+                            <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
+                  <Video className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Secure Therapy Sessions</h4>
@@ -130,8 +130,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-trust/20 rounded-lg flex items-center justify-center">
-                  <DollarSign className="w-6 h-6 text-trust" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
+                  <DollarSign className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Earn Through Consultations</h4>

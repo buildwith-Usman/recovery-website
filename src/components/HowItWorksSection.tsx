@@ -6,13 +6,13 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 bg-healing-light px-4 py-2 rounded-full text-sm font-medium text-healing">
+          <div className="inline-flex items-center gap-2 bg-primary-light px-4 py-2 rounded-full text-sm font-medium text-primary">
             <Play className="w-4 h-4" />
             How It Works
           </div>
           <h2 className="text-4xl font-bold text-foreground">
             Simple Steps to Better
-            <span className="text-transparent bg-gradient-healing bg-clip-text"> Mental Health</span>
+            <span className="text-transparent bg-gradient-hero bg-clip-text"> Mental Health</span>
           </h2>
         </div>
 

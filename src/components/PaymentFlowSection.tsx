@@ -29,7 +29,7 @@ const PaymentFlowSection = () => {
                 <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto shadow-medium">
                   <CreditCard className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-sm font-bold text-secondary-foreground">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">
                   1
                 </div>
               </div>
@@ -48,10 +48,10 @@ const PaymentFlowSection = () => {
           <div className="relative">
             <div className="text-center space-y-4">
               <div className="relative">
-                <div className="w-20 h-20 bg-gradient-healing rounded-2xl flex items-center justify-center mx-auto shadow-medium">
-                  <Shield className="w-10 h-10 text-healing-foreground" />
+                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto shadow-medium">
+                  <Shield className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-sm font-bold text-secondary-foreground">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">
                   2
                 </div>
               </div>
@@ -73,7 +73,7 @@ const PaymentFlowSection = () => {
                 <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto shadow-medium">
                   <DollarSign className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-sm font-bold text-secondary-foreground">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">
                   3
                 </div>
               </div>
@@ -92,10 +92,10 @@ const PaymentFlowSection = () => {
           <div>
             <div className="text-center space-y-4">
               <div className="relative">
-                <div className="w-20 h-20 bg-gradient-healing rounded-2xl flex items-center justify-center mx-auto shadow-medium">
-                  <BarChart3 className="w-10 h-10 text-healing-foreground" />
+                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto shadow-medium">
+                  <BarChart3 className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-sm font-bold text-secondary-foreground">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">
                   4
                 </div>
               </div>
@@ -120,8 +120,8 @@ const PaymentFlowSection = () => {
           </div>
 
           <div className="text-center p-6 bg-card rounded-2xl shadow-soft">
-            <div className="w-12 h-12 bg-healing-light rounded-lg flex items-center justify-center mx-auto mb-4">
-              <BarChart3 className="w-6 h-6 text-healing" />
+            <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center mx-auto mb-4">
+              <BarChart3 className="w-6 h-6 text-primary" />
             </div>
             <h4 className="text-lg font-semibold text-card-foreground mb-2">Real-Time Tracking</h4>
             <p className="text-muted-foreground text-sm">
@@ -130,8 +130,8 @@ const PaymentFlowSection = () => {
           </div>
 
           <div className="text-center p-6 bg-card rounded-2xl shadow-soft">
-            <div className="w-12 h-12 bg-secondary-light rounded-lg flex items-center justify-center mx-auto mb-4">
-              <CreditCard className="w-6 h-6 text-secondary" />
+            <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center mx-auto mb-4">
+              <CreditCard className="w-6 h-6 text-primary" />
             </div>
             <h4 className="text-lg font-semibold text-card-foreground mb-2">Multiple Payment Options</h4>
             <p className="text-muted-foreground text-sm">
