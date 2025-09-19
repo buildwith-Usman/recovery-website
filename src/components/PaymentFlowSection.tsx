@@ -2,7 +2,7 @@ import { CreditCard, Shield, DollarSign, BarChart3, Calendar, Pill } from "lucid
 
 const PaymentFlowSection = () => {
   return (
-    <section className="py-20 bg-gradient-subtle">
+        <section className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">

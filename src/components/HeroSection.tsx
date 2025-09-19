@@ -4,7 +4,7 @@ import recoveryLogo from "@/assets/ic_recovery_logo.png";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative flex items-center bg-gradient-subtle overflow-hidden py-12 lg:py-20">
+    <section id="home" className="relative flex items-center bg-gradient-subtle overflow-hidden py-12 lg:py-20 scroll-mt-20">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
       <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full opacity-10 blur-3xl"></div>

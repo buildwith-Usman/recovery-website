@@ -3,7 +3,7 @@ import medicalTeamImage from "@/assets/medical-team.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-12 lg:py-20 bg-primary relative overflow-hidden">
+        <section id="about" className="py-16 lg:py-24 bg-[#00424E] relative overflow-hidden scroll-mt-20">
       {/* Background decorations */}
       <div className="absolute top-10 right-10 w-40 h-40 bg-white/10 rounded-full opacity-50 blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-32 h-32 bg-white/10 rounded-full opacity-50 blur-3xl"></div>

@@ -5,7 +5,7 @@ import { Mail, Phone, MessageCircle, Send, MapPin, Clock, Heart, Shield, Users }
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
+    <section id="contact" className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden scroll-mt-20">
       {/* Background Elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-[#00424E]/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#00424E]/5 rounded-full blur-3xl"></div>

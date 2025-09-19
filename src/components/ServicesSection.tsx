@@ -4,7 +4,7 @@ import icViewServices from "@/assets/ic_view_services.png";
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-12 lg:py-20 bg-gradient-subtle">
+        <section id="services" className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">

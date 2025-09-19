@@ -2,7 +2,7 @@ import { Download, Calendar, Video, Pill, UserPlus, CheckCircle, Play, ArrowRigh
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-12 lg:py-20 bg-primary/5">
+        <section id="how-it-works" className="py-16 lg:py-24 bg-white relative overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">

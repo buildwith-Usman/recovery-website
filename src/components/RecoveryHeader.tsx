@@ -61,6 +61,13 @@ const RecoveryHeader = () => {
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </a>
             <a 
+              href="#faq" 
+              className="px-4 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200 relative group"
+            >
+              FAQ
+              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a 
               href="#contact" 
               className="px-4 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200 relative group"
             >
@@ -126,6 +133,13 @@ const RecoveryHeader = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 How It Works
+              </a>
+              <a 
+                href="#faq" 
+                className="px-4 py-3 text-lg font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                FAQ
               </a>
               <a 
                 href="#contact" 
