@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Video, Pill, Activity, UserCheck, Stethoscope, DollarSign, Clock } from "lucide-react";
-import medicalTeamImage from "@/assets/medical-team.jpg";
+import icViewServices from "@/assets/ic_view_services.png";
 
 const ServicesSection = () => {
   return (
@@ -23,7 +23,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid lg:grid-cols-3 gap-12 items-center">
+        <div className="grid lg:grid-cols-3 gap-8 items-center">
           {/* For Patients */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
@@ -85,15 +85,12 @@ const ServicesSection = () => {
           </div>
 
           {/* Vertical Image */}
-          <div className="hidden lg:flex justify-center">
-            <div className="relative">
-              <img
-                src={medicalTeamImage}
-                alt="Healthcare professionals providing mental health services"
-                className="w-full max-w-sm h-96 object-cover rounded-2xl shadow-strong"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
-            </div>
+          <div className="hidden lg:flex justify-center items-center h-full">
+            <img
+              src={icViewServices}
+              alt="Healthcare professionals providing mental health services"
+              className="max-w-lg h-[600px] object-contain mx-auto mt-[120px]"
+            />
           </div>
 
           {/* For Healthcare Providers */}
