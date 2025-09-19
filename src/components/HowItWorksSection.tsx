@@ -78,19 +78,6 @@ const HowItWorksSection = () => {
                 Sign up as a healthcare provider and submit your professional credentials for verification.
               </p>
             </div>
-        </div>        {/* Doctor Journey */}
-        <div>
-          <h3 className="text-2xl font-bold text-foreground text-center mb-12">Healthcare Provider Journey</h3>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="text-center space-y-4">
-              <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-medium">
-                <UserPlus className="w-10 h-10 text-white" />
-              </div>
-              <h4 className="text-xl font-semibold text-foreground">Register on App</h4>
-              <p className="text-muted-foreground">
-                Sign up as a healthcare provider and submit your professional credentials for verification.
-              </p>
-            </div>
 
             {/* Arrow with background */}
             <div className="hidden md:flex animate-pulse">

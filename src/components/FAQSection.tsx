@@ -116,11 +116,11 @@ const FAQSection = () => {
             {faqData.map((faq, index) => (
               <div 
                 key={faq.id}
-                className="bg-white border-2 border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
+                className="bg-white border-2 border-gray-100 rounded-2xl shadow-sm hover:shadow-lg hover:border-primary/20 hover:scale-[1.02] transition-all duration-300 group"
               >
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50/50 transition-colors rounded-2xl"
+                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50/50 group-hover:bg-primary/5 transition-colors rounded-2xl"
                 >
                   <div className="flex items-start gap-4 flex-1">
                     <div className="w-10 h-10 bg-[#00424E]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
