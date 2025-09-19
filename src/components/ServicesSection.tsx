@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Video, Pill, Activity, UserCheck, Stethoscope, DollarSign, Clock } from "lucide-react";
+import medicalTeamImage from "@/assets/medical-team.jpg";
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 bg-gradient-subtle">
+    <section id="services" className="py-12 lg:py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
@@ -22,7 +23,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-3 gap-12 items-center">
           {/* For Patients */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
@@ -34,8 +35,8 @@ const ServicesSection = () => {
 
             <div className="grid gap-6">
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-primary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <Calendar className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Book Appointments</h4>
@@ -46,8 +47,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <Video className="w-6 h-6 text-primary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <Video className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Secure Video Consultations</h4>
@@ -58,8 +59,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <Pill className="w-6 h-6 text-primary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <Pill className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Medicine Ordering</h4>
@@ -70,8 +71,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <Activity className="w-6 h-6 text-primary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <Activity className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Track Your Progress</h4>
@@ -83,7 +84,19 @@ const ServicesSection = () => {
             </div>
           </div>
 
-          {/* For Doctors */}
+          {/* Vertical Image */}
+          <div className="hidden lg:flex justify-center">
+            <div className="relative">
+              <img
+                src={medicalTeamImage}
+                alt="Healthcare professionals providing mental health services"
+                className="w-full max-w-sm h-96 object-cover rounded-2xl shadow-strong"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
+            </div>
+          </div>
+
+          {/* For Healthcare Providers */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
               <h3 className="text-2xl font-bold text-foreground mb-4">For Healthcare Providers</h3>
@@ -94,8 +107,8 @@ const ServicesSection = () => {
 
             <div className="grid gap-6">
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <UserCheck className="w-6 h-6 text-primary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <UserCheck className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Easy Registration</h4>
@@ -106,8 +119,8 @@ const ServicesSection = () => {
               </div>
 
                             <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <Video className="w-6 h-6 text-primary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <Video className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Secure Therapy Sessions</h4>
@@ -118,8 +131,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-primary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Appointment Management</h4>
@@ -130,8 +143,8 @@ const ServicesSection = () => {
               </div>
 
               <div className="flex gap-4 p-6 bg-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center">
-                  <DollarSign className="w-6 h-6 text-primary" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                  <DollarSign className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-card-foreground mb-2">Earn Through Consultations</h4>
@@ -142,13 +155,6 @@ const ServicesSection = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button variant="cta" size="lg">
-            Get Started Today
-          </Button>
         </div>
       </div>
     </section>
