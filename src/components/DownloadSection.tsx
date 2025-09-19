@@ -3,7 +3,7 @@ import icRecoveryLogo from "@/assets/ic_recovery_logo.png";
 
 const DownloadSection = () => {
   return (
-    <section className="py-12 lg:py-20 bg-gradient-to-br from-primary/5 to-primary/10 scroll-mt-20">
+    <section id="download" className="py-12 lg:py-20 bg-gradient-to-br from-primary/5 to-primary/10 scroll-mt-20">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}

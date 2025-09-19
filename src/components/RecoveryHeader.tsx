@@ -10,6 +10,21 @@ const RecoveryHeader = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToDownload = () => {
+    const downloadSection = document.getElementById('download');
+    if (downloadSection) {
+      downloadSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const handleMobileDownloadClick = () => {
+    setIsMobileMenuOpen(false);
+    scrollToDownload();
+  };
+
   return (
     <>
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/30 shadow-soft">
@@ -81,6 +96,7 @@ const RecoveryHeader = () => {
             <Button 
               variant="default" 
               size="default" 
+              onClick={scrollToDownload}
               className="gap-2 px-4 py-2 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200"
             >
               <Smartphone className="w-4 h-4" />
@@ -152,6 +168,7 @@ const RecoveryHeader = () => {
                 <Button 
                   variant="hero" 
                   size="lg" 
+                  onClick={handleMobileDownloadClick}
                   className="w-full gap-3 py-4 text-lg font-semibold shadow-medium"
                 >
                   <Download className="w-5 h-5" />
@@ -160,6 +177,7 @@ const RecoveryHeader = () => {
                 <Button 
                   variant="hero" 
                   size="lg" 
+                  onClick={handleMobileDownloadClick}
                   className="w-full gap-3 py-4 text-lg font-semibold shadow-medium bg-foreground text-background hover:bg-foreground/90"
                 >
                   <Apple className="w-5 h-5" />
