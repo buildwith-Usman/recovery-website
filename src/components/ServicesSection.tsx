@@ -5,7 +5,7 @@ import icViewServices from "@/assets/ic_view_services.png";
 const ServicesSection = () => {
   return (
     <section id="services" className="py-12 lg:py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full text-sm font-medium text-primary-foreground">

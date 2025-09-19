@@ -3,7 +3,7 @@ import { Download, Calendar, Video, Pill, UserPlus, CheckCircle, Play, ArrowRigh
 const HowItWorksSection = () => {
   return (
     <section id="how-it-works" className="py-12 lg:py-20 bg-primary/5">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full text-sm font-medium text-primary-foreground">

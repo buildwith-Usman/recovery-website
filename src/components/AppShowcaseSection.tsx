@@ -47,7 +47,7 @@ const AppShowcaseSection = () => {
 
   return (
     <section className="py-12 lg:py-20 bg-gradient-to-br from-slate-800 to-slate-900">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* App Carousel */}
           <div className="relative flex justify-center">

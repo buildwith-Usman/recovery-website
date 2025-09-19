@@ -3,7 +3,7 @@ import icRecoveryLogo from "@/assets/ic_recovery_logo.png";
 const Footer = () => {
   return (
     <footer className="bg-trust text-trust-foreground py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">

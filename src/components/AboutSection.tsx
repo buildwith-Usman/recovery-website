@@ -9,7 +9,7 @@ const AboutSection = () => {
       <div className="absolute bottom-20 left-10 w-32 h-32 bg-white/10 rounded-full opacity-50 blur-3xl"></div>
       <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-white/10 rounded-full opacity-30 blur-2xl"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
